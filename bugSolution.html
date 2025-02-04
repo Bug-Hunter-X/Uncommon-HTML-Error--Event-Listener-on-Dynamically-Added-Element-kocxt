@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Error Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    <p>This is some text.</p>
+  </div>
+
+  <script>
+    // Correct way to add event listener to a dynamically created element
+    const newDiv = document.createElement('div');
+    newDiv.innerHTML = '<p>Dynamically added content</p>';
+    document.body.appendChild(newDiv);
+    newDiv.addEventListener('click', function() {
+      alert('Dynamically added div clicked!');
+    });
+  </script>
+</body>
+</html>
